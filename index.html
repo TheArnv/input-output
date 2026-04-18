@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Input & Output Devices | Complete Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            color: #1a2a3a;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Header / Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 5px solid #ffd700;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Navigation / Quick Links */
+        .nav-links {
+            background: #1a2a3a;
+            padding: 0.8rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            background: #2a3a4a;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            background: #ffd700;
+            color: #1a2a3a;
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Slide / Card Style */
+        .slide {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .slide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .slide-header {
+            background: #2a5298;
+            color: white;
+            padding: 1rem 1.8rem;
+            font-size: 1.6rem;
+            font-weight: bold;
+            border-left: 8px solid #ffd700;
+        }
+
+        .slide-content {
+            padding: 1.8rem;
+        }
+
+        .slide-content ul, .slide-content ol {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .slide-content li {
+            margin: 0.6rem 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e9ecef;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2a5298;
+            margin-right: 0.5rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card-mini {
+            background: #f8f9fc;
+            border-radius: 16px;
+            padding: 1.2rem;
+            border-left: 4px solid #2a5298;
+        }
+
+        .card-mini h4 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        th {
+            background: #2a5298;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .footer {
+            background: #1a2a3a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-top: 4px solid #ffd700;
+        }
+
+        h3 {
+            color: #1e3c72;
+            margin-bottom: 0.8rem;
+            font-size: 1.4rem;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #ccc, transparent);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .slide-header { font-size: 1.3rem; }
+            .container { padding: 1rem; }
+            .nav-links a { padding: 0.3rem 0.8rem; font-size: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>⌨️ Input & Output Devices 🖥️</h1>
+    <p>Hardware that enables communication between a user/system and a computer</p>
+</div>
+
+<div class="nav-links">
+    <a href="#slide1">What is I/O?</a>
+    <a href="#slide2">Categories</a>
+    <a href="#slide3">Input Devices</a>
+    <a href="#slide4">Output Devices</a>
+    <a href="#slide5">Hybrid Devices</a>
+    <a href="#summary">Summary</a>
+</div>
+
+<div class="container">
+    <!-- SLIDE 1: Title Slide equivalent -->
+    <div class="slide" id="slide1">
+        <div class="slide-header">📌 Slide 1: What is an I/O Device?</div>
+        <div class="slide-content">
+            <ul>
+                <li>✅ I/O stands for <strong>Input/Output</strong></li>
+                <li>✅ Any hardware that allows a human or system to communicate with a computer</li>
+                <li>✅ Can <strong>BOTH</strong> receive data (input) and deliver data (output)</li>
+                <li>✅ Acts as a <strong>bridge</strong> between the computer and the outside world</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: Categories -->
+    <div class="slide" id="slide2">
+        <div class="slide-header">📂 Slide 2: Categories of I/O Devices</div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div class="card-mini"><h4>🔹 1. Input Devices</h4><p>Send data to the CPU</p></div>
+                <div class="card-mini"><h4>🔸 2. Output Devices</h4><p>Display results from the CPU</p></div>
+                <div class="card-mini"><h4>🔹 3. Hybrid Devices</h4><p>Perform both input and output functions</p></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: Keyboard -->
+    <div class="slide" id="slide3">
+        <div class="slide-header">⌨️ Slide 3: Input Device – Keyboard</div>
+        <div class="slide-content">
+            <p><strong>Keyboard</strong> – Most frequent and widely used input device. Layout similar to a typewriter.</p>
+            <ul>
+                <li>Sizes: 84, 101/102, or 104/108 keys</li>
+                <li><span class="badge">Numeric Keys</span> 0-9</li>
+                <li><span class="badge">Typing Keys</span> A-Z</li>
+                <li><span class="badge">Control Keys</span> Arrows, Home, End, Delete, Ctrl, Alt</li>
+                <li><span class="badge">Special Keys</span> Enter, Shift, Caps Lock, Tab</li>
+                <li><span class="badge">Function Keys</span> F1 to F12</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: Mouse -->
+    <div class="slide">
+        <div class="slide-header">🖱️ Slide 4: Input Device – Mouse</div>
+        <div class="slide-content">
+            <ul>
+                <li>Most common <strong>pointing device</strong></li>
+                <li>Moves cursor across the screen</li>
+                <li>Left button → Select or move items</li>
+                <li>Right button → Display extra menus</li>
+                <li>Computer depends on user to move it</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: Joystick & Track Ball -->
+    <div class="slide">
+        <div class="slide-header">🎮 Slide 5: Joystick & Track Ball</div>
+        <div class="slide-content">
+            <div class="grid-2">
+                <div><strong>Joystick</strong><br>Pointing device movable in all four directions.<br>Uses: CAD (Computer-Aided Design) and video games.</div>
+                <div><strong>Track Ball</strong><br>Notebook/laptop accessory (mouse alternative).<br>Half-inserted ball moved with fingers.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: Light Pen & Scanner -->
+    <div class="slide">
+        <div class="slide-header">✒️ Slide 6: Light Pen & Scanner</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Light Pen</strong> – Pen-shaped pointing device. Draw on monitor or select menu items. Contains photocell and optical system.</li>
+                <li><strong>Scanner</strong> – Functions like a photocopier. Converts paper information to digital format. Allows image modification before printing.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 7: OMR, OCR, MICR -->
+    <div class="slide">
+        <div class="slide-header">📄 Slide 7: OMR, OCR, MICR</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>OMR (Optical Mark Reader)</strong> – Used in educational institutions. Recognizes pencil/pen marks on objective exams.</li>
+                <li><strong>OCR (Optical Character Reader)</strong> – Reads printed text character by character. Converts to machine-readable code.</li>
+                <li><strong>MICR (Magnetic Ink Card Reader)</strong> – Used in banks for cheque processing. Reads magnetic ink – very fast.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 8: Bar Code Reader & Webcam -->
+    <div class="slide">
+        <div class="slide-header">📷 Slide 8: Bar Code Reader & Webcam</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Bar Code Reader</strong> – Reads data from light and dark lines (bar codes). Converts to alphanumeric value. Handheld or stationary.</li>
+                <li><strong>Web Camera (Webcam)</strong> – Records video images. Built-in (laptops) or USB-connected. Captures images and HD videos.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 9: Digitizer & Microphone -->
+    <div class="slide">
+        <div class="slide-header">🎤 Slide 9: Digitizer & Microphone</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Digitizer</strong> – Converts analog signals to digital signals (numeric values). Example: Graphic Tablet.</li>
+                <li><strong>Microphone</strong> – Receives voice signals as input. Converts audio to digital form. Common in music-related devices.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 10: Monitor -->
+    <div class="slide" id="slide4">
+        <div class="slide-header">🖥️ Slide 10: Output Device – Monitor</div>
+        <div class="slide-content">
+            <p><strong>Monitor (Visual Display Unit - VDU)</strong> – Primary output device. Creates images using small dots called <strong>PIXELS</strong>.</p>
+            <ul>
+                <li><strong>CRT Monitor</strong> – Uses visual elements; resolution determines quality.</li>
+                <li><strong>Flat-Panel Display</strong> – Less volume, weight, power consumption; used in laptops, calculators, video games.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 11: Television & Printer -->
+    <div class="slide">
+        <div class="slide-header">📺 Slide 11: Television & Printer</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Television</strong> – Common output device. Portrays video and audio. Modern: Plasma displays | Older: CRT screens.</li>
+                <li><strong>Printer</strong> – Prints information on paper. Two main categories: Impact Printers & Non-Impact Printers.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 12: Impact Printers -->
+    <div class="slide">
+        <div class="slide-header">🖨️ Slide 12: Impact Printers</div>
+        <div class="slide-content">
+            <ul>
+                <li>Low consumable cost</li>
+                <li>Quite noisy</li>
+                <li>Ideal for large-scale printing</li>
+                <li>Physical contact with paper</li>
+                <li><strong>Types:</strong> Character Printers (Dot Matrix, Daisy Wheel) & Line Printers (Drum, Chain)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 13: Non-Impact Printers -->
+    <div class="slide">
+        <div class="slide-header">⚡ Slide 13: Non-Impact Printers (Page Printers)</div>
+        <div class="slide-content">
+            <ul>
+                <li>Faster</li>
+                <li>Quiet</li>
+                <li>Excellent quality</li>
+                <li>Supports many fonts and character sizes</li>
+                <li><strong>Types:</strong> Laser Printers (use laser lights) & Inkjet Printers (spray technology for high-quality color printing)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 14: Speakers & Projector -->
+    <div class="slide">
+        <div class="slide-header">🔊 Slide 14: Speakers & Projector</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Speakers</strong> – Produce sound after computer command. Modern: Wireless technology (Bluetooth).</li>
+                <li><strong>Projector</strong> – Optical device. Shows visuals on large screens. Uses: Theatres, auditoriums.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 15: Plotter & Braille Reader -->
+    <div class="slide">
+        <div class="slide-header">📐 Slide 15: Plotter & Braille Reader</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Plotter</strong> – Creates graphics/images for realistic view. Requires graphic card. Pen-like device for exact designs.</li>
+                <li><strong>Braille Reader</strong> – For blind or low-vision users. Run fingers over device to recognize letters/alphabets.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 16: Video Card, GPS, Headphones -->
+    <div class="slide">
+        <div class="slide-header">🎧 Slide 16: Video Card, GPS, Headphones</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>Video Card</strong> – Fitted into motherboard. Improves digital content on output devices.</li>
+                <li><strong>GPS (Global Positioning System)</strong> – Uses satellite technology for location tracking. Provides directions.</li>
+                <li><strong>Headphones (Headsets)</strong> – Single-person use. Lower sound frequency.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 17: Hybrid Devices Intro -->
+    <div class="slide" id="slide5">
+        <div class="slide-header">🔄 Slide 17: Hybrid Devices (Input + Output)</div>
+        <div class="slide-content">
+            <p><strong>What are Hybrid Devices?</strong> Devices that act as BOTH input and output tools. Versatile, efficient, improve user interaction.</p>
+            <p><strong>Common Uses:</strong> Data storage, Communication, Seamless interaction.</p>
+        </div>
+    </div>
+
+    <!-- SLIDE 18: Touchscreen -->
+    <div class="slide">
+        <div class="slide-header">📱 Slide 18: Hybrid Device – Touchscreen</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>As Output:</strong> Shows information like a regular monitor.</li>
+                <li><strong>As Input:</strong> Interact directly by touching the screen.</li>
+                <li><strong>Common Uses:</strong> Smartphones, Tablets, ATMs, Kiosks.</li>
+                <li><strong>Advanced Types:</strong> Capacitive and resistive (multiple touch detection).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 19: External Hard Drive -->
+    <div class="slide">
+        <div class="slide-header">💾 Slide 19: Hybrid Device – External Hard Drive</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>As Output:</strong> Save files onto it (storage).</li>
+                <li><strong>As Input:</strong> Access or modify saved files (retrieve data).</li>
+                <li><strong>Connection:</strong> USB, Thunderbolt.</li>
+                <li><strong>Common Uses:</strong> Backing up data, transferring large files, adding extra storage. <strong>Portable</strong>.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 20: USB Flash Drive -->
+    <div class="slide">
+        <div class="slide-header">🔌 Slide 20: Hybrid Device – USB Flash Drive</div>
+        <div class="slide-content">
+            <ul>
+                <li><strong>As Output:</strong> Copy files onto it (storing information).</li>
+                <li><strong>As Input:</strong> Access or transfer files to another computer.</li>
+                <li><strong>Features:</strong> Compact, portable, high storage capacity, simple to use.</li>
+                <li><strong>Common Uses:</strong> Transferring files, creating bootable OS, emergency backup.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 21: Summary Table -->
+    <div class="slide" id="summary">
+        <div class="slide-header">📊 Slide 21: Summary – Key Takeaways</div>
+        <div class="slide-content">
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Function</th><th>Examples</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Input</td><td>Sends data TO computer</td><td>Keyboard, Mouse, Microphone</td></tr>
+                    <tr><td>Output</td><td>Receives data FROM computer</td><td>Monitor, Printer, Speakers</td></tr>
+                    <tr><td>Hybrid</td><td>Does BOTH</td><td>Touchscreen, USB Drive, External HDD</td></tr>
+                </tbody>
+            </table>
+            <p><strong>Remember:</strong> The CPU receives from input devices and sends to output devices.</p>
+        </div>
+    </div>
+
+    
+
+<div class="footer">
+    <p>📚 Input & Output Devices | Complete Educational Resource Created By Arnav Sharma</p>
+    <p style="opacity: 0.7; font-size: 0.8rem;">Based on the slide-by-slide content | Hybrid, Input & Output covered</p>
+</div>
+
+</body>
+</html>
